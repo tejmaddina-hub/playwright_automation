@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Install Dependencies') {
             steps {
-                sh 'npm*ci'
+                sh 'npm ci'
             }
         }
         stage('Install browsers') {
