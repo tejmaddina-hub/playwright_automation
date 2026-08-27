@@ -14,12 +14,6 @@ test('second test', async({page})=>
     await page.goto('https://www.amazon.com/');
     await page.locator('#twotabsearchtextbox').fill('snowboard');
     await page.locator('#nav-search-submit-button').click();
-    expect({ timeout: 50 * 1000 });
-    await page.click('[data-image-index="3"]');
-    await page.screenshot({path:'/Users/tejeswaramaddina/Downloads/playwright_automation/myscreenshots/screenshot.png'});
-    await page.locator('#add-to-cart-button').click();
-    expect({ timeout: 60 * 1000 });
-    console.log(await page.textContent('a-size-medium-plus a-color-base sw-atc-text a-text-bold'));
 }); 
 
 test("third test", async({page})=>
