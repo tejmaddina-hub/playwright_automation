@@ -24,4 +24,4 @@ pipeline {
             sh 'docker build -t playwright-automation:1 .'
             }
         }
-}
+}}
