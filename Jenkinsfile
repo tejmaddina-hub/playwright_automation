@@ -19,12 +19,10 @@ pipeline {
                 sh 'npx playwright test'
             }
         }
-        stage('Docker Debug') {
+        stage('Docker Build') {
             steps {
-            sh 'echo $PATH'
-            sh 'which docker || true'
-            sh '/usr/local/bin/docker --version'
-            } 
+                sh '/usr/local/bin/docker build -t playwright-automation .'
+            }
         }  
     }
 }
