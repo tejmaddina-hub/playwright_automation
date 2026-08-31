@@ -19,6 +19,10 @@ pipeline {
                 sh 'npx playwright test'
             }
         }
+        stage('Build Docker Image') {
+            steps {
+            sh 'docker build -t playwright-automation:1 .'
+            }
     }
 }
 
